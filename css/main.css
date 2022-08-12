@@ -70,6 +70,7 @@ nav.sm-navbar{
     border-bottom: 1px solid #0000001c;
     position: sticky;
     top: 0;
+    z-index: 1000000;
 }
 
 nav.navbar ul.links,
@@ -292,6 +293,86 @@ section.services .section-content .srv{
 
 /* End Services Section */
 
+/* Features Section */
+
+section.feats{
+    background: url("../imgs/services_background.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+section.feats .overlay{
+    background-color: #324651d2;
+    width: 100%;
+    height: 100%;
+    padding: var(--section-padding) 0;
+}
+
+section.feats .overlay .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+section.feats .overlay .container .text h2{
+    font-size: 40px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+section.feats .overlay .container .text p{
+    font-size: 15px;
+    margin: 20px 0;
+    color: #fff;
+    line-height: var(--main-line-height);
+}
+
+section.feats .overlay .container .text ul li{
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+section.feats .overlay .container .text ul li i{
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+section.feats .foot{
+    background-color: var(--secondary-color);
+    padding: 40px 0;
+    /* margin-top: -130px; */
+}
+
+section.feats .foot .container{
+    display: flex;
+    justify-content: center;
+}
+
+section.feats .foot a{
+    color: var(--main-color);
+    background-color: #fff;
+    border: 2px solid #fff;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content;
+    transition: .2s;
+    transform: scale(1);
+}
+
+section.feats .foot a:hover{
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* End Features Section */
+
 /* Media Queries */
 
 @media (max-width: 767px){
@@ -318,17 +399,38 @@ section.services .section-content .srv{
     section.header .overlay .text a{
         padding: 5px 10px;
     }
+
+    section.feats .overlay .container{
+        flex-direction: column-reverse;
+    }
+    
+    section.feats .overlay .container .image img{
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 768px){
     .container{
         width: 720px;
     }
+    section.feats .overlay .container{
+        flex-direction: column-reverse;
+    }
+    
+    section.feats .overlay .container .image img{
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 992px){
     .container{
         width: 960px;
+    }
+    section.feats .overlay .container{
+        flex-direction: row;
+    }
+    section.feats .overlay .container .image img{
+        max-width: initial;
     }
 }
 
