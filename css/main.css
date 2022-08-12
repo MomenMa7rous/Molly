@@ -8,6 +8,7 @@ body{
     --main-color: #324651;
     --secondary-color: #ffe500;
     --section-padding: 70px;
+    --main-line-height: 1.5; 
 }
 
 *{
@@ -26,6 +27,36 @@ ul{
 .container{
     padding: 0 15px;
     margin: 0 auto;
+}
+
+h1.main-heading{
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    color: var(--main-color);
+    font-weight: 600;
+    position: relative;
+}
+
+h1.main-heading::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 13px;
+    background: url("../imgs/svg/separator.svg") center center no-repeat;
+}
+
+h1.main-heading + p{
+    color: #777;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 15px;
+    line-height: var(--main-line-height);
+}
+
+.section-content{
+    margin-top: 70px;
 }
 
 /* End Initial Styles */
@@ -202,6 +233,12 @@ section.header .overlay .text h1{
     border-bottom: 2px solid var(--secondary-color);
 }
 
+section.header .overlay .text p{
+    font-size: 15px;
+    line-height: var(--main-line-height);
+    max-width: 700px;
+}
+
 section.header .overlay .text a{
     display: block;
     color: var(--main-color);
@@ -222,6 +259,38 @@ section.header .overlay .text a:hover{
 }
 
 /* End Header */
+
+/* Services Section */
+
+section.services {
+    padding: var(--section-padding) 0;
+}
+
+section.services .section-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+section.services .section-content .srv h2{
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+section.services .section-content .srv p{
+    font-size: 15px;
+    color: #777;
+    line-height: var(--main-line-height);
+}
+
+section.services .section-content .srv{
+    text-align: center;
+}
+
+/* End Services Section */
 
 /* Media Queries */
 
