@@ -7,6 +7,7 @@ body{
 :root{
     --main-color: #324651;
     --secondary-color: #ffe500;
+    --section-padding: 70px;
 }
 
 *{
@@ -37,6 +38,7 @@ nav.sm-navbar{
     padding: 15px 0;
     border-bottom: 1px solid #0000001c;
     position: sticky;
+    top: 0;
 }
 
 nav.navbar ul.links,
@@ -161,6 +163,66 @@ nav.sm-navbar ul.links .drop:hover ul.dropdown{
 
 /* End Navbar */
 
+/* Header */
+
+section.header{
+    background: url("../imgs/slider_background.png");
+}
+
+section.header .overlay{
+    background-color: #324651d2;
+    width: 100%;
+    height: 100%;
+    padding: var(--section-padding) 0;
+}
+
+section.header .overlay .text{
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.header .overlay .text h5.berif{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+section.header .overlay .text h5.berif span{
+    color: var(--secondary-color);
+}
+
+section.header .overlay .text h1{
+    font-size: 100px;
+    font-weight: 500;
+    margin: 20px;
+    width: fit-content;
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+section.header .overlay .text a{
+    display: block;
+    color: var(--main-color);
+    padding: 7px 20px;
+    text-decoration: none;
+    margin-top: 25px;
+    background-color: #fff;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    font-weight: 600;
+    transform: scale(1);
+    transition: .2s;
+}
+
+section.header .overlay .text a:hover{
+    transform: scale(1.1);
+}
+
+/* End Header */
+
 /* Media Queries */
 
 @media (max-width: 767px){
@@ -174,6 +236,18 @@ nav.sm-navbar ul.links .drop:hover ul.dropdown{
 
     nav.sm-navbar {
         display: block;
+    }
+
+    section.header .overlay .text h1{
+        font-size: 60px;
+    }
+
+    section.header .overlay .text p{
+        font-size: 14px;
+    }
+
+    section.header .overlay .text a{
+        padding: 5px 10px;
     }
 }
 
