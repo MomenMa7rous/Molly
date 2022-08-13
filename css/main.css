@@ -481,6 +481,60 @@ section.portfolio .section-content .works .box:hover::after{
 
 /* End Portfolio Section */
 
+/* Video Part */
+
+section.video{
+    padding: var(--section-padding) 0;
+    background-color: var(--secondary-color);
+}
+
+section.video .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section.video .container .video{
+    width: 100%;
+}
+
+section.video .container .video iframe{
+    max-width: 600px;
+    height: 350px;
+}
+
+section.video .container .text{
+    max-width: 100%;
+}
+
+section.video .container .text h2.title{
+    color: var(--main-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+section.video .container .text p.subtitle{
+    font-size: 14px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+section.video .container .text p.description{
+    font-size: 15px;
+    line-height: var(--main-line-height);
+    font-weight: 500;
+}
+
+section.video .container .text p.subtitle::before{
+    content: "- ";
+}
+
+/* End Video Part */
+
 /* Media Queries */
 
 @media (max-width: 410px){
@@ -544,6 +598,18 @@ section.portfolio .section-content .works .box:hover::after{
     section.portfolio .section-content .works .box::after{
         font-size: 17px;
     }
+    section.video .container{
+        flex-direction: column;
+    }
+    section.video .container .video iframe{
+        max-width: 100%;
+        height: 330px;
+    }
+    section.video .container .text{
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 3px;
+    }
 }
 
 @media (min-width: 768px){
@@ -556,6 +622,18 @@ section.portfolio .section-content .works .box:hover::after{
     
     section.feats .overlay .container .image img{
         max-width: 100%;
+    }
+    section.video .container{
+        flex-direction: column;
+    }
+    section.video .container .video iframe{
+        max-width: 100%;
+        height: 500px;
+    }
+    section.video .container .text{
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 3px;
     }
 }
 
@@ -574,6 +652,18 @@ section.portfolio .section-content .works .box:hover::after{
 @media (min-width: 1200px){
     .container{
         width: 1140px;
+    }
+    section.video .container{
+        flex-direction: row;
+    }
+    section.video .container .video iframe{
+        max-width: 100%;
+        height: 350px;
+    }
+    section.video .container .text{
+        padding: 0;
+        border: initial;
+        border-radius: 0;
     }
 }
 
