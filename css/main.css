@@ -554,6 +554,72 @@ section.video .container .text a:hover{
 
 /* End Video Part */
 
+/* Order Part */
+
+section.order{
+    padding-top: var(--section-padding);
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+section.order .text{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.order .text h2{
+    font-weight: 600;
+    font-size: 35px;
+}
+
+section.order .text p{
+    font-style: italic;
+    font-size: 15px;
+    color: #b1b1b1;
+    margin: 10px 0 30px;
+}
+
+section.order .text a{
+    display: block;
+    width: fit-content;
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: .2s;
+    border: 2px solid #fff;
+    transform: scale(1);
+}
+
+section.order .text a:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    color: var(--secondary-color);
+}
+
+section.order .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.order .image{
+    margin-bottom: -5%;
+}
+
+section.order .image img{
+    max-width: 100%;
+}
+
+/* End Order Part */
+
 /* Media Queries */
 
 @media (max-width: 410px){
@@ -631,6 +697,12 @@ section.video .container .text a:hover{
     }
     section.video .container .text a{
         padding: 6px 12px;
+    }
+    section.order .text a{
+        padding: 6px 12px;
+    }
+    section.order .text h2{
+        font-size: 25px;
     }
 }
 
