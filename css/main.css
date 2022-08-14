@@ -8,7 +8,7 @@ body{
     --main-color: #324651;
     --secondary-color: #ffe500;
     --section-padding: 70px;
-    --main-line-height: 1.5; 
+    --main-line-height: 1.6; 
 }
 
 *{
@@ -620,6 +620,125 @@ section.order .image img{
 
 /* End Order Part */
 
+/* About Section */
+
+section.about{
+    padding-top: var(--section-padding);
+}
+
+section.about .section-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+section.about .section-content .text h2.name{
+    color: var(--secondary-color);
+    font-size: 26px;
+}
+
+section.about .section-content .text p.job{
+    font-size: 15px;
+    color: var(--main-color);
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+section.about .section-content .text p.job::before{
+    content: "- ";
+}
+
+section.about .section-content .text p.bio{
+    line-height: var(--main-line-height);
+    color: #999;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+section.about .section-content .text ul.social{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: fit-content;
+}
+
+section.about .section-content .text ul.social li a{
+    padding: 10px;
+    color: var(--main-color);
+    border-radius: 10px;
+    transition: .2s;
+}
+
+section.about .section-content .text ul.social li a:hover{
+    background-color: var(--secondary-color);
+}
+
+/* End About Section */
+
+/* Skills Section */
+
+section.skills-about{
+    padding: var(--section-padding) 0;
+    background-color: var(--main-color);
+}
+
+section.skills-about .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+section.skills-about .container .skills,
+section.skills-about .container .about{
+    width: 100%;
+}
+
+section.skills-about .container .skills h2,
+section.skills-about .container .about h2{
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+section.skills-about .container .skills ul.skills-list li.skill span.title{
+    display: block;
+    color: #fff;
+    /* font-weight: 600; */
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+section.skills-about .container .skills ul.skills-list li.skill span.progress-bar{
+    display: block;
+    width: 100%;
+    background-color: #eee;
+    height: 17px;
+    border-radius: 10px;
+    position: relative;
+}
+
+section.skills-about .container .skills ul.skills-list li.skill span.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    height: 100%;
+    border-radius: 10px;
+}
+
+section.skills-about .container .about p{
+    color: #e1e1e1;
+    line-height: var(--main-line-height);
+}
+
+/* End Skills Section */
+
 /* Media Queries */
 
 @media (max-width: 410px){
@@ -704,6 +823,26 @@ section.order .image img{
     section.order .text h2{
         font-size: 25px;
     }
+    section.about .section-content{
+        flex-direction: column;
+    }
+    section.about .section-content .text{
+        text-align: center;
+    }
+    section.about .section-content .text ul.social{
+        width: 100%;
+        justify-content: center;
+    }
+    section.about{
+        padding: var(--section-padding) 0;
+    }
+    section.about .section-content .image img{
+        max-width: 100%;
+    }
+    section.skills-about .container{
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 @media (min-width: 768px){
@@ -729,6 +868,26 @@ section.order .image img{
         border: 1px solid #000;
         border-radius: 3px;
     }
+    section.about .section-content{
+        flex-direction: column;
+    }
+    section.about .section-content .text{
+        text-align: center;
+    }
+    section.about .section-content .text ul.social{
+        width: 100%;
+        justify-content: center;
+    }
+    section.about{
+        padding: var(--section-padding) 0;
+    }
+    section.about .section-content .image img{
+        max-width: 100%;
+    }
+    section.skills-about .container{
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 @media (min-width: 992px){
@@ -739,6 +898,22 @@ section.order .image img{
         flex-direction: row;
     }
     section.feats .overlay .container .image img{
+        max-width: initial;
+    }
+    section.about .section-content{
+        flex-direction: row;
+    }
+    section.about .section-content .text{
+        text-align: initial;
+    }
+    section.about .section-content .text ul.social{
+        width: fit-content;
+        justify-content: space-between;
+    }
+    section.about{
+        padding-bottom: 0;
+    }
+    section.about .section-content .image img{
         max-width: initial;
     }
 }
@@ -758,6 +933,10 @@ section.order .image img{
         padding: 0;
         border: initial;
         border-radius: 0;
+    }
+    section.skills-about .container{
+        flex-direction: row;
+        gap: 30px;
     }
 }
 
