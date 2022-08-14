@@ -739,6 +739,134 @@ section.skills-about .container .about p{
 
 /* End Skills Section */
 
+/* Blog Section */
+
+section.blog{
+    padding: var(--section-padding) 0;
+}
+
+section.blog .section-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.blog .section-content .posts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+section.blog .section-content .posts .post .image{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+section.blog .section-content .posts .image img{
+    width: 100%;
+}
+
+section.blog .section-content .posts .post:first-child{
+    grid-column:span 2 ;
+}
+
+section.blog .section-content .posts .post:nth-child(2){
+    grid-column:span 2 ;
+}
+
+section.blog .section-content .posts .post{
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 2px solid #c2cfd7;
+}
+
+section.blog .section-content .posts .post .body{
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+section.blog .section-content .posts .post .body h2.title{
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+section.blog .section-content .posts .post .body h2 a{
+    color: inherit;
+    text-decoration: none;
+    transition: .2s;
+}
+
+section.blog .section-content .posts .post .body h2 a:hover{
+    color: var(--main-color);
+}
+
+section.blog .section-content .posts .post .body span.date{
+    font-size: 12px;
+    color: var(--main-color);
+    display: block;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+section.blog .section-content .posts .post .body span.date::before{
+    content: "- ";
+}
+
+section.blog .section-content .posts .post .body span.date span{
+    color: #000;
+    font-weight: bold;
+}
+
+section.blog .section-content .posts .post .body p.description{
+    color: #777;
+    font-size: 15px;
+    line-height: var(--main-line-height);
+    margin-bottom: 15px;
+}
+
+section.blog .section-content .posts .post .body .foot{
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.blog .section-content .posts .post .body .foot > a:last-of-type{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+section.blog .section-content .posts .post .body .foot > a:last-of-type:hover{
+    color: var(--main-color);
+}
+
+section.blog .section-content > a:last-child{
+    margin-top: 60px;
+    display: block;
+    width: fit-content;
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    transition: .2s;
+    transform: scale(1);
+    border: 2px solid var(--secondary-color);
+}
+
+section.blog .section-content > a:last-child:hover{
+    transform: scale(1.1);
+    background-color: transparent;
+}
+
+/* End Blog Section */
+
 /* Media Queries */
 
 @media (max-width: 410px){
@@ -843,6 +971,15 @@ section.skills-about .container .about p{
         flex-direction: column;
         gap: 50px;
     }
+    section.blog .section-content .posts .post:first-child{
+        grid-column: initial;
+    }
+    section.blog .section-content .posts .post:nth-child(2){
+        grid-column: initial;
+    }
+    section.blog .section-content > a:last-child{
+        padding: 6px 12px;
+    }
 }
 
 @media (min-width: 768px){
@@ -887,6 +1024,12 @@ section.skills-about .container .about p{
     section.skills-about .container{
         flex-direction: column;
         gap: 50px;
+    }
+    section.blog .section-content .posts .post:first-child{
+        grid-column: initial;
+    }
+    section.blog .section-content .posts .post:nth-child(2){
+        grid-column: initial;
     }
 }
 
@@ -937,6 +1080,12 @@ section.skills-about .container .about p{
     section.skills-about .container{
         flex-direction: row;
         gap: 30px;
+    }
+    section.blog .section-content .posts .post:first-child{
+        grid-column: span 2;
+    }
+    section.blog .section-content .posts .post:nth-child(2){
+        grid-column: span 2;
     }
 }
 
