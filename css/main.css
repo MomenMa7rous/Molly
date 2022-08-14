@@ -439,7 +439,7 @@ section.portfolio .section-content .foot a{
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
-    padding: 8px 20px;
+    padding: 8px 16px;
     background-color: var(--secondary-color);
     border-radius: 10px;
     transition: .2s;
@@ -533,6 +533,25 @@ section.video .container .text p.subtitle::before{
     content: "- ";
 }
 
+section.video .container .text a{
+    display: block;
+    width: fit-content;
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: .2s;
+    border: 2px solid #fff;
+    margin-top: 20px;
+}
+
+section.video .container .text a:hover{
+    background-color: transparent;
+}
+
 /* End Video Part */
 
 /* Media Queries */
@@ -609,6 +628,9 @@ section.video .container .text p.subtitle::before{
         padding: 20px;
         border: 1px solid #000;
         border-radius: 3px;
+    }
+    section.video .container .text a{
+        padding: 6px 12px;
     }
 }
 
