@@ -59,6 +59,10 @@ h1.main-heading + p{
     margin-top: 70px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* End Initial Styles */
 
 /* Navbar */
@@ -199,6 +203,9 @@ nav.sm-navbar ul.links .drop:hover ul.dropdown{
 
 section.header{
     background: url("../imgs/slider_background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
 }
 
 section.header .overlay{
@@ -300,6 +307,7 @@ section.feats{
     background: url("../imgs/services_background.png");
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
 }
 
 section.feats .overlay{
@@ -423,6 +431,7 @@ section.portfolio .section-content .works .box{
     justify-content: center;
     align-items: center;
     position: relative;
+    border-radius: 2px;
 }
 
 section.portfolio .section-content .foot{
@@ -473,6 +482,7 @@ section.portfolio .section-content .works .box::after{
     padding: 15px;
     text-transform: uppercase;
     transition: .3s;
+    border-radius: 2px;
 }
 
 section.portfolio .section-content .works .box:hover::after{
