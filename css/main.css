@@ -1014,11 +1014,60 @@ section.contact .section-content form button:hover{
 
 /* End Contact Section */
 
+/* Footer */
+
+footer{
+    padding: var(--section-padding) 0;
+    background-color: #182227;
+    color: #fff;
+    text-align: center;
+}
+
+footer .container > span{
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+footer ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: .2s;
+}
+
+footer ul li a:hover{
+    background-color: var(--secondary-color);
+}
+
+footer p span{
+    color: var(--secondary-color);
+}
+
+/* End Footer */
+
 /* Media Queries */
 
 @media (max-width: 410px){
     section.portfolio .section-content .works{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    footer .container > span{
+        font-size: 19px;
     }
 }
 
